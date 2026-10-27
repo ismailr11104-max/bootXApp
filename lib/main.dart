@@ -1,4 +1,5 @@
 import 'package:bootx_app/core/helper_functions/on_generate_routes.dart';
+import 'package:bootx_app/core/services/service_locator/setup_service_locator.dart';
 import 'package:bootx_app/core/services/shared_preferences/shared_pref_manger.dart';
 import 'package:bootx_app/core/utils/app_colors.dart';
 import 'package:bootx_app/features/onboarding/presentation/page/onboarding_page.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  setupServiceLocator();
   await PrefManger.SharedPrefManger().init();
   runApp(
     DevicePreview(

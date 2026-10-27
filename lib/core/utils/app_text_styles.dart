@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class AppTextStyles {
-  static const String fontFamily = 'DM Mono';
+  static const String fontFamily = 'Airbnb Cereal';
 
   static const TextStyle regular12 = TextStyle(
     fontFamily: fontFamily,

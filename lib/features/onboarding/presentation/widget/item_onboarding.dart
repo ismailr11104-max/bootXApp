@@ -2,8 +2,8 @@ import 'package:bootx_app/core/services/shared_preferences/shared_pref_manger.da
 import 'package:bootx_app/core/utils/app_colors.dart';
 import 'package:bootx_app/core/utils/app_image.dart';
 import 'package:bootx_app/core/utils/app_text_styles.dart';
+import 'package:bootx_app/features/auth/presentation/page/sign_in_page.dart';
 import 'package:bootx_app/features/onboarding/data/model/onboarding_model.dart';
-import 'package:bootx_app/features/sign_in/presentation/page/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

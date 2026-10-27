@@ -33,11 +33,16 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
+  cupertino_icons: ^2.0.0
   flutter_svg: ^2.3.0
   smooth_page_indicator: ^3.0.0
   device_preview: 1.2.0
   shared_preferences: ^2.5.6
+  dio: ^5.11.1
+  equatable: ^3.0.0
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
+  get_it: ^9.3.0
 
 dev_dependencies:
   flutter_test:
@@ -74,11 +79,11 @@ flutter:
   # example:
   # fonts:
   fonts:
-    - family: DM Mono
+    - family: Airbnb Cereal
       fonts:
-        - asset: assets/fonts/DMMono-Medium.ttf
+        - asset: assets/fonts/AirbnbCereal_W_Md.otf
           weight: 500
-        - asset: assets/fonts/DMMono-Regular.ttf
+        - asset: assets/fonts/AirbnbCereal_W_Bk.otf
           weight: 400
   #   - family: Trajan Pro
   #     fonts:
