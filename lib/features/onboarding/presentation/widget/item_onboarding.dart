@@ -90,7 +90,7 @@ class ItemOnboarding extends StatelessWidget {
                         onPressed: () {
                           if (index == itemsList.length - 1) {
                             PrefManger.SharedPrefManger().setBool(
-                              'isOnboarding',
+                              'onboarding_completed',
                               true,
                             );
                             Navigator.of(context)
