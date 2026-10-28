@@ -1,3 +1,4 @@
+import 'package:bootx_app/core/services/shared_preferences/shared_pref_manger.dart';
 import 'package:bootx_app/core/utils/app_validator.dart';
 import 'package:bootx_app/core/wigets/custom_button.dart';
 import 'package:bootx_app/core/wigets/custom_text_from_field.dart';
@@ -8,6 +9,7 @@ import 'package:bootx_app/features/auth/presentation/page/sign_up_page.dart';
 import 'package:bootx_app/features/auth/presentation/widget/auth_footer_widget.dart';
 import 'package:bootx_app/features/auth/presentation/widget/auth_header_widget.dart';
 import 'package:bootx_app/features/auth/presentation/widget/google_signIn_button.dart';
+import 'package:bootx_app/features/home/presentation/page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -73,12 +75,16 @@ class _SignInBodyState extends State<SignInBody> {
               BlocConsumer<AuthBloc, AuthState>(
                 listener: (context, state) {
                   if (state is AuthSuccess) {
+                    PrefManger.SharedPrefManger().setBool('isSignIn', true);
+                    if (!context.mounted) return;
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text('Welcome back, ${state.user.name}!'),
                         backgroundColor: Colors.green,
                       ),
                     );
+                    Navigator.of(context)
+                        .pushReplacementNamed(HomePage.homeRouts);
                   } else if (state is AuthError) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
