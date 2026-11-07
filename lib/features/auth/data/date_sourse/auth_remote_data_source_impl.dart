@@ -1,10 +1,10 @@
 import 'package:bootx_app/core/services/network/api_constance.dart';
-import 'package:bootx_app/core/services/network/auth_api_service.dart';
+import 'package:bootx_app/core/services/network/api_service.dart';
 import 'package:bootx_app/features/auth/data/date_sourse/auth_remote_data_source.dart';
 import 'package:bootx_app/features/auth/data/model/auth_response_model.dart';
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
-  final AuthApiService _apiService;
+  final ApiService _apiService;
 
   AuthRemoteDataSourceImpl(this._apiService);
 
